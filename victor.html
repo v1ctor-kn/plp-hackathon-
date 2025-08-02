@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Victor Mwenda Thambura's Portfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(120deg, #181824 0%, #23243a 100%);
+            margin: 0;
+            padding: 0;
+            animation: fadeInBody 1s;
+            color: #f2f2f2;
+        }
+
+        @keyframes fadeInBody {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .header {
+            background: linear-gradient(90deg, #0a0a23 60%, #3a3a7c 100%);
+            color: rgb(187, 11, 11);
+            padding: 30px;
+            text-align: center;
+            animation: slideDown 1s;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-40px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .header h1 {
+            letter-spacing: 2px;
+            font-size: 2.5em;
+            animation: pulse 4s infinite alternate;
+        }
+
+        @keyframes pulse {
+            to {
+                text-shadow: 0 0 12px #fff, 0 0 24px #dadae5;
+            }
+        }
+
+        .section {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+            background: #23243a;
+            color: #f2f2f2;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(60, 60, 120, 0.08);
+            animation: fadeInSection 1.2s;
+        }
+
+        @keyframes fadeInSection {
+            from {
+                opacity: 100;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .languages span {
+            background: #3a3a7c;
+            color: #fff;
+            padding: 8px 12px;
+            margin-right: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background 0.3s, transform 0.3s;
+            cursor: pointer;
+        }
+
+        .languages span:hover {
+            background: #00ffcc;
+            color: #23243a;
+            transform: scale(1.1);
+        }
+
+        button {
+            background: linear-gradient(90deg, #0a0a23 60%, #00ffcc 100%);
+            color: #23243a;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 6px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 18px;
+            transition: background 0.3s, transform 0.3s;
+            box-shadow: 0 2px 8px rgba(60, 60, 120, 0.12);
+        }
+
+        button:hover {
+            background: #00ffcc;
+            color: #0a0a23;
+            transform: scale(1.05);
+        }
+
+        .edu-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .edu-box {
+            background: linear-gradient(120deg, #23243a 0%, #181824 100%);
+            color: #f2f2f2;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(60, 60, 120, 0.10);
+            padding: 18px 24px;
+            width: 260px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .edu-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 24px rgba(60, 60, 120, 0.18);
+            background: linear-gradient(120deg, #3a3a7c 0%, #23243a 100%);
+        }
+
+
+
+
+        .tab-btn {
+            background: #3a3a7c;
+            color: #fff;
+            border: none;
+            padding: 10px 18px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s;
+        }
+
+        .tab-btn:hover {
+            background: #222;
+        }
+
+        .tab-content {
+            background: #f2f2f2;
+            color: #222;
+            padding: 18px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .main-nav {
+            width: 100%;
+            background: linear-gradient(90deg, #181824 60%, #3a3a7c 100%);
+            padding: 12px 0;
+            text-align: center;
+            margin-bottom: 18px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .main-nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 18px;
+            font-size: 1.1em;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: color 0.3s, border-bottom 0.3s;
+            padding-bottom: 4px;
+        }
+
+        .main-nav a:hover {
+            color: #00ffcc;
+            border-bottom: 2px solid #00ffcc;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="main-nav">
+        <a href="#aboutme">About Me</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="header">
+        <img src="victor plp .jpg" alt="Profile Picture"
+            style="width:400px; height:300px; border-radius:100%; margin-bottom:10px;">
+        <h1>Victor Mwenda Thambura's Portfolio</h1>
+        <p>Entrepreneur | Aspiring Developer and Data analyst</p>
+    </div>
+    <div class="section" id="aboutme">
+        <h2>👋 About Me</h2>
+        <p>
+            Hello! I'm Victor Mwenda Thambura, an educator and aspiring developer with a passion for data analysis and
+            technology. I enjoy learning new programming languages, solving problems, and sharing knowledge with others.
+            My goal is to leverage my skills in statistical programming to make a positive impact in the tech industry.
+        </p>
+        <p>
+            Outside of academics and coding, I love reading books about self growth, my current read is "The art of
+            seduction" by Robert Greene. I also enjoy english football, and also play a little myself.
+        </p>
+    </div>
+
+    <div class="section" id="education">
+        <h2>📚 Education Background</h2>
+        <div class="edu-boxes">
+            <div class="edu-box">
+                <strong>PRIMARY EDUCATION</strong>
+                <p>St. Mary's Primary School</p>
+                <p>Finished in 2018 with 399 in my KCPE</p>
+            </div>
+            <div class="edu-box">
+                <strong>SECONDARY EDUCATION</strong>
+                <p>Mang'u Highschool</p>
+                <p>Finished in 2022 with a mean grade of B+ in my KCSE</p>
+            </div>
+            <div class="edu-box">
+                <strong>UNIVERSITY EDUCATION</strong>
+                <p>Kenyatta University</p>
+                <p>Currently pursuing a Bachelor of Science in Statistical Programming</p>
+            </div>
+        </div>
+        <button>DOWNLOAD CV</button>
+    </div>
+
+    <div class="section" id="skills">
+        <h2>💻 Programming Skills</h2>
+        <div class="languages">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+        </div>
+    </div>
+
+    <div class="section" id="projects">
+        <h2>📁 Projects</h2>
+        <p>Built demo websites for local businesses including a phone shop mockup using HTML/CSS/JS.</p>
+    </div>
+
+    <div class="section" id="contact">
+        <h2>📧 Contact Me</h2>
+        <p>If you want to get in touch, feel free to reach out via email.<br>
+            <a href="mailto:Mwendavictor@gmail.com" style="color:#00ffcc;">Mwendavictor@gmail.com</a>
+        </p>
+        <p>Phone Number: <a href="tel:0726143585" style="color=red">0726143585</a></p>
+        <button
+            style="background:linear-gradient(90deg, #0a0a23 60%, #00ffcc 100%); color:#23243a; border:none; padding:12px 28px; border-radius:6px; font-size:1em; cursor:pointer; margin-top:18px; transition:background 0.3s; transition:transform 0.3s; box-shadow:0 2px 8px rgba(60,60,120,0.12);"
+            onclick="window.location.href='mailto:Mwendavictor@gmail.com?subject=Portfolio%20Contact'">
+            Contact Me
+        </button>
+        <br><br>
+        <p><strong>Send me info:</strong></p>
+        <form action="mailto:Mwendavictor@gmail.com" method="POST" enctype="text/plain"
+            style="background:#181824; padding:18px; border-radius:12px; max-width:350px; margin:auto;">
+            <input type="text" name="Name" placeholder="Your Name" required
+                style="padding:8px; border-radius:4px; border:none; margin-bottom:8px; width:90%; background:#23243a; color:#f2f2f2;"><br>
+            <input type="email" name="Email" placeholder="Your Email" required
+                style="padding:8px; border-radius:4px; border:none; margin-bottom:8px; width:90%; background:#23243a; color:#f2f2f2;"><br>
+            <textarea name="Message" placeholder="Your Message" required
+                style="padding:8px; border-radius:4px; border:none; margin-bottom:8px; width:90%; height:80px; background:#23243a; color:#f2f2f2;"></textarea><br>
+            <button type="submit"
+                style="background:linear-gradient(90deg, #0a0a23 60%, #00ffcc 100%); color:#23243a; border:none; padding:10px 20px; border-radius:5px; cursor:pointer; transition:background 0.3s, transform 0.3s;">
+                Send Message
+            </button>
+        </form>
+    </div>
+    <footer
+        style="background:linear-gradient(90deg, #181824 60%, #3a3a7c 100%); color:#f2f2f2; text-align:center; padding:18px 0; margin-top:32px; border-radius:0 0 12px 12px;">
+        &copy; 2025 Victor Mwenda Thambura. All rights reserved.
+    </footer>
+</body>
+
+</html>
